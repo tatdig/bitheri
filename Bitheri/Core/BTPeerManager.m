@@ -47,10 +47,12 @@
 #import "BTHDAccount.h"
 
 #if BITCOIN_TESTNET
-static const char *dns_seeds[] = { "testnet-seed.bitcoin.petertodd.org", "testnet-seed.bluematt.me" };
+static const char *dns_seeds[] = {
+            "seeds.nigez.com", "seeds2.nigez.com", "seeds3.nigez.com", "seeds4.nigez.com", "seeds5.nigez.com"
+};
 #else // main net
 static const char *dns_seeds[] = {
-        "seed.bitcoin.sipa.be", "dnsseed.bluematt.me", "bitseed.xf2.org", "seed.bitcoinstats.com", "seed.bitnodes.io"
+        "seeds.nigez.com", "seeds2.nigez.com", "seeds3.nigez.com", "seeds4.nigez.com", "seeds5.nigez.com"
 };
 #endif
 
