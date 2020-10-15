@@ -39,9 +39,17 @@
 #import <Foundation/Foundation.h>
 
 #if BITCOIN_TESTNET
-#define BITCOIN_MAGIC_NUMBER 0x0709110b
+//pchMessageStart[0] = 0x12;
+//pchMessageStart[1] = 0x47;
+//pchMessageStart[2] = 0x7b;
+//chMessageStart[3] = 0x59;
+#define BITCOIN_MAGIC_NUMBER 0x597b4712
 #else
-#define BITCOIN_MAGIC_NUMBER 0xd9b4bef9
+//pchMessageStart[0] = 0x12;
+//pchMessageStart[1] = 0xa6;
+//pchMessageStart[2] = 0xf5;
+//pchMessageStart[3] = 0x58;
+#define BITCOIN_MAGIC_NUMBER 0x58f5a612
 #endif
 
 @interface NSMutableData (Bitcoin)
