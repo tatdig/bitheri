@@ -53,13 +53,13 @@
 
 // peer
 #if BITCOIN_TESTNET
-    #define BITCOIN_STANDARD_PORT          18333
-    #define BITCOIN_REFERENCE_BLOCK_HEIGHT 150000
-    #define BITCOIN_REFERENCE_BLOCK_TIME   (1386098130.0 - NSTimeIntervalSince1970)
+    #define BITCOIN_STANDARD_PORT          19901
+    #define BITCOIN_REFERENCE_BLOCK_HEIGHT 70000
+    #define BITCOIN_REFERENCE_BLOCK_TIME   (1601711184.0 - NSTimeIntervalSince1970)
 #else
-#define BITCOIN_STANDARD_PORT          8333
-#define BITCOIN_REFERENCE_BLOCK_HEIGHT 250000
-#define BITCOIN_REFERENCE_BLOCK_TIME   (1375533383.0 - NSTimeIntervalSince1970)
+#define BITCOIN_STANDARD_PORT          9901
+#define BITCOIN_REFERENCE_BLOCK_HEIGHT 70000
+#define BITCOIN_REFERENCE_BLOCK_TIME   (1601599254.0 - NSTimeIntervalSince1970)
 #endif
 
 // error
@@ -119,20 +119,20 @@
 
 // block chain
 #if BITCOIN_TESTNET
-    #define GENESIS_BLOCK_HASH @"000000000933ea01ad0ee984209779baaec3ced90fa3f408719526f8d77f4943".hexToData.reverse
+#define GENESIS_BLOCK_HASH @"00000000ca704e9118579962d0b0f361bf9cf99589ef78cf288e90f16008e8aa".hexToData.reverse
 #else // main net
-#define GENESIS_BLOCK_HASH @"000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f".hexToData.reverse
+#define GENESIS_BLOCK_HASH @"0000000018bf6fb29c9649e8a31497576e1ac95afd32c3d051ca2d3b0d789ca1".hexToData.reverse
 // blockchain checkpoints, these are also used as starting points for partial chain downloads, so they need to be at
 // difficulty transition boundaries in order to verify the block difficulty at the immediately following transition
 #endif
 
 // block
-#define BLOCK_DIFFICULTY_INTERVAL 2016      // number of blocks between difficulty target adjustments
+#define BLOCK_DIFFICULTY_INTERVAL 1008      // number of blocks between difficulty target adjustments
 #define BLOCK_UNKNOWN_HEIGHT       INT32_MAX
 
 #define MAX_TIME_DRIFT    (2*60*60)     // the furthest in the future a block is allowed to be timestamped
 #define MAX_PROOF_OF_WORK 0x1d00ffffu   // highest value for difficulty target (higher values are less difficult)
-#define TARGET_TIMESPAN   (14*24*60*60) // the targeted timespan between difficulty target adjustments
+#define TARGET_TIMESPAN   (7*24*60*60) // the targeted timespan between difficulty target adjustments
 #define MAX_UNRELATED_TX_RELAY_COUNT 1000
 #define RELAY_BLOCK_COUNT_WHEN_SYNC (5)
 // address
